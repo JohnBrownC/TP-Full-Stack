@@ -1,0 +1,119 @@
+/* Page d'accueil */
+#homeback {
+  background-image: url('Photos/_MG_2464.1.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: 7%;
+  background-position-x: 5%; 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: white;
+  opacity: 85%;
+  background-position-y: 0%;
+  color: rgb(0, 0, 0);
+}
+
+nav {
+  background-color: white;
+  /* position:fixed;*/
+}
+
+a:hover {
+  background-color: black;
+  opacity: 30%;
+  text-decoration: wavy;
+  color: aliceblue;
+}
+
+main {
+  flex-grow: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+.paragraph {
+  width: 200px;
+  height: 300px;
+  padding: 10px;
+  border: 1px solid black;
+  margin: 20px;
+  box-sizing: border-box;
+  background-color: black;
+  opacity: 0.45;
+  color: white;
+}
+
+.hr {
+  border: none;
+  border-top: 3px solid rgb(255, 255, 255);
+  margin: 20px auto;
+  width: 100%; 
+  position: relative;
+  top: 40px;
+}
+
+/* Page de galeries */
+#Galleries {
+  background-image: url("Photos/background.jpg");
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-position-y:-350px;
+  background-position-x:auto; 
+}
+
+.aboutus {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  padding: 10px;
+  color: aliceblue;
+  box-sizing: border-box;
+  background-color: black;
+  opacity: 0.80;
+  position: relative;
+  top: 16px;
+}
+
+/* Pied de page */
+.footer {
+  height: 55px;
+  background-color: aliceblue;
+  text-align: center;
+  opacity: 85%;
+  flex-shrink: 0;
+  bottom: 0;
+}
+
+.footer h1 {
+  font-size: 19px;
+  position: relative;
+  top: 4px;
+  left: auto;
+  width: auto;
+  height: 15px;
+}
+
+.footer a {
+  position: relative;
+  top: -8px;
+  left: auto;
+  width: auto;
+  height: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .paragraph {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+  }
+}
