@@ -1,0 +1,23 @@
+.container {
+  color: bisque;
+  background-color: rgb(2, 2, 24);
+}
+p {
+  padding: 20px;
+}
+.titulo {
+  margin-left: 10px;
+  border-bottom: 2px solid brown;
+}
+
+.white-background {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  
+  padding: 0.5rem;
+  background-color: beige;
+  color: rgb(2, 2, 24);
+  padding: 20px;
+}
