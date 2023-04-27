@@ -27,9 +27,11 @@ p {
 }
 .floatleft {
   float: left;
+  border-radius: 0% 20% 0% 20%;
 }
 .floatrigth {
   float: right;
+  border-radius: 0% 20% 0% 20%;
 }
 .texto-resaltado {
   font-size: large;
