@@ -1,3 +1,4 @@
+
 .container {
   color: bisque;
   background-color: rgb(2, 2, 24);
@@ -15,9 +16,44 @@ p {
 
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  
+
   padding: 0.5rem;
-  background-color: beige;
+  background-color: rgb(131, 131, 82);
   color: rgb(2, 2, 24);
   padding: 20px;
 }
+.img-container{
+    position: relative;
+}
+.floatleft {
+  float: left;
+}
+.floatrigth {
+  float: right;
+}
+.texto-resaltado {
+  font-size: large;
+  font-weight: bold;
+}
+
+img.floatleft:hover {
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  bottom:20px;
+  background-color:  rgb(2, 2, 24);
+  border-radius: 20% 0% 20% 0%;
+  
+}
+
+img.floatrigth:hover {
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color:  rgb(2, 2, 24);
+    border-radius: 20% 0% 20% 0%;
+    
+    
+  }
