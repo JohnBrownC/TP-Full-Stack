@@ -1,4 +1,8 @@
-
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
 .container {
   color: bisque;
   background-color: rgb(2, 2, 24);
@@ -22,16 +26,16 @@ p {
   color: rgb(2, 2, 24);
   padding: 20px;
 }
-.img-container{
-    position: relative;
+.img-container {
+  position: relative;
 }
 .floatleft {
   float: left;
-  border-radius: 0% 20% 0% 20%;
+  border-radius: 20%;
 }
 .floatrigth {
   float: right;
-  border-radius: 0% 20% 0% 20%;
+  border-radius: 20%;
 }
 .texto-resaltado {
   font-size: large;
@@ -39,23 +43,36 @@ p {
 }
 
 img.floatleft:hover {
-  height: 250px;
-  width: 250px;
-  position: absolute;
-  bottom:20px;
-  background-color:  rgb(2, 2, 24);
-  border-radius: 20% 0% 20% 0%;
-  
+  bottom: 20px;
+  background-color: rgb(2, 2, 24);
+  border-radius: 40%;
 }
 
 img.floatrigth:hover {
-    height: 250px;
-    width: 250px;
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    background-color:  rgb(2, 2, 24);
-    border-radius: 20% 0% 20% 0%;
-    
-    
+  right: 0px;
+  top: 0px;
+  background-color: rgb(2, 2, 24);
+  border-radius: 40%;
+}
+
+@media screen and (min-width: 1000px) {
+    .floatleft {
+        float: left;
+        border-radius: 20%;
+        height: 250px;
+        width: 250px;
+      }
+      .floatrigth {
+        float: right;
+        border-radius: 20%;
+        height: 250px;
+        width: 250px;
+      }
   }
+
+  /* @media screen and (width: 600px) {
+    img {
+        height: 100px;
+        width: 100px;
+    }
+  } */
