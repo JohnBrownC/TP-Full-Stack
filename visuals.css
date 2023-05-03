@@ -68,18 +68,24 @@ a {
   background-position-y:-350px;
   background-position-x:auto; 
 }
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-  grid-template-rows: repeat(4, 1fr); /* 4 filas */
-  grid-gap: 10px; /* espacio entre las imágenes */
+.div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
 }
 
-  .img-galeria {
-    width: 200px;
-    height: 200px;
+div.gallery:hover {
+  border: 1px solid #777;
+}
+ .img-galeria {
+    width: 100%;
+  height: auto;
   }
-
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
 .row {
   display: flex;
   flex-wrap: wrap;
