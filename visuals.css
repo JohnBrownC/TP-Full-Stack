@@ -68,6 +68,18 @@ a {
   background-position-y:-350px;
   background-position-x:auto; 
 }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  grid-template-rows: repeat(4, 1fr); /* 4 filas */
+  grid-gap: 10px; /* espacio entre las imágenes */
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .aboutus {
   text-align: center;
