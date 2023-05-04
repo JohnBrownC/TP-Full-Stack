@@ -1,54 +1,65 @@
-html,
+@import url("https://fonts.googleapis.com/css?family=Arima+Madurai:300");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* html,
 body {
   height: 100%;
   margin: 0;
+  scroll-behavior: smooth;
+  background-color: #d3c0af;
+} */
+
+.aboutUs-container {
+  font-family:"Roboto" ;
+  color: #1e2d32;
+  background-color: #ca9954;
 }
-.container {
-  color: bisque;
-  background-color: rgb(2, 2, 24);
-}
-p {
+.aboutUs-p {
   padding: 20px;
 }
-.titulo {
-  margin-left: 10px;
-  border-bottom: 2px solid brown;
+.aboutUs-titulo {
+  font-family: "Arima Madurai", cursive;
+  color: black;
+  font-size: 4rem;
+  letter-spacing: -3px;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.6);
+  position: relative;
+  z-index: 3;
 }
 
-.white-background {
+.aboutUs-white-background {
   display: grid;
 
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-
+  gap: 30px;
   padding: 0.5rem;
-  background-color: rgb(131, 131, 82);
-  color: rgb(2, 2, 24);
+  background-color: #d3c0af;
+  color: #1e2d32;
   padding: 20px;
 }
-.img-container {
+.aboutUs-img-container {
   position: relative;
 }
-.floatleft {
+.aboutUs-floatleft {
   float: left;
   border-radius: 20%;
 }
-.floatrigth {
+.aboutUs-floatrigth {
   float: right;
   border-radius: 20%;
 }
-.texto-resaltado {
+.aboutUs-texto-resaltado {
   font-size: large;
   font-weight: bold;
 }
 
-img.floatleft:hover {
+img.aboutUs-floatleft:hover {
   bottom: 20px;
   background-color: rgb(2, 2, 24);
   border-radius: 40%;
 }
 
-img.floatrigth:hover {
+img.aboutUs-floatrigth:hover {
   right: 0px;
   top: 0px;
   background-color: rgb(2, 2, 24);
@@ -56,23 +67,23 @@ img.floatrigth:hover {
 }
 
 @media screen and (min-width: 1000px) {
-    .floatleft {
-        float: left;
-        border-radius: 20%;
-        height: 250px;
-        width: 250px;
-      }
-      .floatrigth {
-        float: right;
-        border-radius: 20%;
-        height: 250px;
-        width: 250px;
-      }
+  .aboutUs-floatleft {
+    float: left;
+    border-radius: 20%;
+    height: 250px;
+    width: 250px;
   }
+  .aboutUs-floatrigth {
+    float: right;
+    border-radius: 20%;
+    height: 250px;
+    width: 250px;
+  }
+}
 
-  /* @media screen and (width: 600px) {
+/*  @media screen and (width: 600px) {
     img {
         height: 100px;
         width: 100px;
     }
-  } */
+  }  */
