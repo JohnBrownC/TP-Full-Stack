@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8"/>
+  <head>
+    <meta charset="UTF-8" />
     <title>John Brown Visuals</title>
-    <link rel="stylesheet" href="visuals.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="visuals.css" />
     <script src="visuals.js"></script>
     <link rel="stylesheet" href="aboutUs.css" />
     <link rel="stylesheet" href="animations.css"
-</head>
-<body>
-  <div id="homeback">
-  <header>
-    <nav>
+  </head>
+  <body>
+    <div id="homeback">
+      <!-- COMENTADO PARA PROBAR ALGO -->
+      <!--   <header>
+    
+         <nav>
       <ul><p style="text-align:center";>
       <a href= "Home.html"> HOME </a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -26,143 +29,223 @@
       <a href="#AboutUs" onclick="removeAnchorFromURL()"> ABOUT US </a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <a href= "Contactus.html"> CONTACT </a>
-      </ul></p><hr>
-    </nav>
-  </header>
+    </ul></p><hr>
+  </nav>
+</header>  -->
+      <header
+        style="
+          position: fixed;
+          top: 0;
+          width: 100%;
+          z-index: 1;
+          box-shadow: 0px 0px 100px #000000;
+        "
+      >
+        <div
+          class="header-container"
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            height: 12vh;
+          "
+        >
+          <a href="Home.html"> HOME </a>
 
+          <a href="#Galleries"> GALLERIES </a>
+          <a
+            id="John Brown"
+            style="font-size: 25px"
+            href="JohnBrownVisuals(home).html"
+          >
+            JOHN BROWN VISUALS</a
+          >
+          <a href="#AboutUs" onclick="removeAnchorFromURL()"> ABOUT US </a>
+          <a href="Contactus.html"> CONTACT </a>
+        </div>
+      </header>
 
-    <section id="Home">
-    
+      <section id="Home">
         <main>
           <div class="paragraph">
-          <h1>Photography </h1>
-                  <p> Photography art is a way, to explore the world around us,<br> 
-             to capture moments of beauty, joy,<br>
-             and pain, and to share them with others. <br>And
-             <strong>JohnBrown Visuals</strong> it's here to help you save your best memories.
-                  </p></div>
-         </main>
-
-    </section>
+            <h1>Photography</h1>
+            <p>
+              Photography art is a way, to explore the world around us,<br />
+              to capture moments of beauty, joy,<br />
+              and pain, and to share them with others. <br />And
+              <strong>JohnBrown Visuals</strong> it's here to help you save your
+              best memories.
+            </p>
+          </div>
+        </main>
+      </section>
     </div>
     <!-- <hr class="hr">-->
-    <section id="Galleries">
-    </section>
-    <section id="AboutUs" >
-        <div class="aboutUs">
-          <div class="aboutUs-container">
-            <div class="container-all">
+    <section id="Galleries"></section>
+    <section id="AboutUs">
+      <div class="aboutUs">
+        <div class="aboutUs-container">
+          <div class="container-all">
             <h1 class="aboutUs-titulo">Acerca de nosotros</h1>
             <div class="bird-container bird-container--one">
               <div class="bird bird--one"></div>
-          </div>
-          
-          <div class="bird-container bird-container--two">
-              <div class="bird bird--two"></div>
-          </div>
-          
-          <div class="bird-container bird-container--three">
-              <div class="bird bird--three"></div>
-          </div>
-          
-          <div class="bird-container bird-container--four">
-              <div class="bird bird--four"></div>
-          </div>
-          </div>
-            <p class="aboutUs-p" style="text-align: justify;">
-              ¡Bienvenidos a nuestro sitio de fotografía! Somos un equipo de cuatro personas
-              que nos conocimos durante el curso de Codo-A-Codo. Juntos compartimos nuestra pasión por capturar momentos y contar historias a través de las imágenes.
-              Nos encanta experimentar con diferentes técnicas y estilos fotográficos, desde la fotografía callejera hasta la fotografía de paisajes y retratos.
-            </p>
-            <div class="aboutUs-white-background">
-              <!-- grid 4*4 -->
-              <div class="aboutUs-img-container">
-                <img
-                  class="aboutUs-floatrigth"
-                  src="./assets/german.jpg"
-                  height="200px"
-                  width="200px"
-                  alt="caritasXD"
-                />
-                <p class="aboutUs-p" >
-                  <span class="texto-resaltado">Germán</span>, enamorado del arte, la buena 
-                  comida, los amigos y la familia. Eterno estudiante de programación, desarrollador 
-                  fullstack, Nodejs y Reactjs.
-
-                </p>
-              </div>
-              <div class="aboutUs-img-container">
-                <img
-                  class="aboutUs-floatrigth"
-                  src="./assets/jhonb.jpeg"
-                  height="200px"
-                  width="200px"
-                  alt="caritasXD"
-                />
-                <p>
-                  I'm <span class="texto-resaltado">John Brown</span> a IT student
-                  from UAI, I am a fullstack Python developer (junior) and polyglot,
-                  I'm a team player and have excellent communication skills.
-                </p>
-              </div>
-              <div>
-                <img
-                  class="aboutUs-floatleft"
-                  src="./assets/imgPreview.svg"
-                  height="200px"
-                  width="200px"
-                  alt="caritasXD"
-                />
-                <p class="Abou">
-                  Hola soy <span class="aboutUs-texto-resaltado">Fran</span>, ingeniero
-                  nuclear, aviador, suelo recorrer el mundo en busca de tesoros
-                  invaluables!
-                </p>
-              </div>
-              <div>
-                <img
-                  class="aboutUs-floatleft"
-                  src="./assets/imgPreview.svg"
-                  height="200px"
-                  width="200px"
-                  alt="caritasXD"
-                />
-                <p>
-                  Mi nombre es
-                  <span class="aboutUs-texto-resaltado"
-                    >Clarii</span
-                    > , estuve a punto de abandonar el barco, pero un buen
-                    capitán no suele abandonar el barco hasta el final
-                </p>
-              </div>
             </div>
-            <p class=" aboutUs-p">
-              En este sitio, compartiremos las mejores fotos de nuestra <a href="#Galleries" onclick="removeAnchorFromURL()" style="color:rgb(12, 42, 108)">galería </a>, así como consejos y trucos 
-              para mejorar tus habilidades fotográficas. Nos encanta enseñar y aprender de 
-              nuestros lectores, así que no dudes en ponerte en <a href="#Contact" onclick="removeAnchorFromURL()" style="color:rgb(12, 42, 108)">contacto</a>  con nosotros si tienes 
-              alguna pregunta o comentario.
 
-              ¡Esperamos que disfrutes de nuestro sitio tanto como nosotros disfrutamos creándolo!
-            </p>
+            <div class="bird-container bird-container--two">
+              <div class="bird bird--two"></div>
+            </div>
+
+            <div class="bird-container bird-container--three">
+              <div class="bird bird--three"></div>
+            </div>
+
+            <div class="bird-container bird-container--four">
+              <div class="bird bird--four"></div>
+            </div>
           </div>
+          <p class="aboutUs-p" style="text-align: justify">
+            ¡Bienvenidos a nuestro sitio de fotografía! Somos un equipo de
+            cuatro personas que nos conocimos durante el curso de Codo-A-Codo.
+            Juntos compartimos nuestra pasión por capturar momentos y contar
+            historias a través de las imágenes. Nos encanta experimentar con
+            diferentes técnicas y estilos fotográficos, desde la fotografía
+            callejera hasta la fotografía de paisajes y retratos.
+          </p>
+          <div class="aboutUs-white-background">
+            <!-- grid 4*4 -->
+            <div class="aboutUs-img-container">
+              <img
+                class="aboutUs-floatrigth"
+                src="./assets/german.jpg"
+                height="200px"
+                width="200px"
+                alt="caritasXD"
+              />
+              <p>
+                <span class="aboutUs-texto-resaltado">Germán</span>, enamorado
+                del arte, la buena comida, los amigos y la familia. Eterno
+                estudiante de programación, desarrollador fullstack, Nodejs y
+                Reactjs.
+              </p>
+            </div>
+            <div class="aboutUs-img-container">
+              <img
+                class="aboutUs-floatrigth"
+                src="./assets/jhonb.jpeg"
+                height="200px"
+                width="200px"
+                alt="caritasXD"
+              />
+              <p>
+                I'm <span class="aboutUs-texto-resaltado">John Brown</span> a IT
+                student from UAI, I am a fullstack Python developer (junior) and
+                polyglot, I'm a team player and have excellent communication
+                skills.
+              </p>
+            </div>
+            <div>
+              <img
+                class="aboutUs-floatleft"
+                src="./assets/imgPreview.svg"
+                height="200px"
+                width="200px"
+                alt="caritasXD"
+              />
+              <p>
+                <span class="aboutUs-texto-resaltado">Fran</span> es un
+                compañero de curso de programación apasionado por la tecnología
+                y siempre está interesado en aprender cosas nuevas. Él tiene
+                habilidades en varios lenguajes de programación y le encanta
+                colaborar en proyectos en equipo. Fran es muy organizado y
+                siempre cumple con sus tareas en el tiempo establecido. Además,
+                es un comunicador efectivo y siempre está dispuesto a ayudar a
+                sus compañeros en todo lo que pueda.
+              </p>
+            </div>
+            <div>
+              <img
+                class="aboutUs-floatleft"
+                src="./assets/imgPreview.svg"
+                height="200px"
+                width="200px"
+                alt="caritasXD"
+              />
+              <p>
+                <span class="aboutUs-texto-resaltado">Clarii</span> es una
+                compañera de curso de programación muy dedicada y apasionada por
+                la tecnología. Ella tiene habilidades en varios lenguajes de
+                programación y siempre está dispuesta a colaborar en proyectos
+                en equipo. Clarii es muy creativa y siempre aporta nuevas ideas
+                a los proyectos en los que trabaja. Además, es muy organizada y
+                tiene una gran habilidad para resolver problemas técnicos.
+                Clarii es una persona amistosa y comunicativa, lo que la hace un
+                gran activo en cualquier equipo.
+              </p>
+            </div>
+          </div>
+          <p class="aboutUs-p">
+            En este sitio, compartiremos las mejores fotos de nuestra
+            <a
+              href="#Galleries"
+              onclick="removeAnchorFromURL()"
+              style="color: rgb(12, 42, 108)"
+              >galería </a
+            >, así como consejos y trucos para mejorar tus habilidades
+            fotográficas. Nos encanta enseñar y aprender de nuestros lectores,
+            así que no dudes en ponerte en
+            <a
+              href="#Contact"
+              onclick="removeAnchorFromURL()"
+              style="color: rgb(12, 42, 108)"
+              >contacto</a
+            >
+            con nosotros si tienes alguna pregunta o comentario. ¡Esperamos que
+            disfrutes de nuestro sitio tanto como nosotros disfrutamos
+            creándolo!
+          </p>
+        </div>
         <!-- <p class="textaboutus">My photography celebrates individuality and inner beauty,<br>
             telling unique stories in an authentic and inspiring way.<br>
             As a trusted partner, I create portraits <br> that clients will cherish for a lifetime,<br>
             providing access to beautiful and meaningful images.</p> -->
-        </div>
-    </section> 
+      </div>
+    </section>
 
     <section id="Contact">
-
-    <div class="footer">
-    <footer>
-      <h1> <strong> FIND US </strong> </h1>
-      <a href="https://www.instagram.com/johnbrown.visual/" target="_blank"><img style="width:10px;height:10px;" src="Photos/instagram.png" alt="Instagram Link Of JOHN BROWN" id="IG" /></a>
-      <a href="mailto:johnbrown.visuals@gmail.com" target="_blank"><img style="width:10px;height:10px;" src="Photos/gmail.png" alt=" Send Mail To JOHN BROWN" id="Mail" /></a>
-      <a href="https://wa.me/5491127201283" target="_blank"><img style="width:10px;height:10px;" src="Photos/whatsapp.png" alt=" Send Message To JOHN BROWN" id="Whatsapp" /></a>
-      <a href="tel:5491127201283" target="_blank"><img style="width:10px;height:10px;" src="Photos/viber.png" alt=" Call To +54 9 11 2720 1283" id="Whatsapp" /></a>
-    </footer>
-    </div>
-   </section>
-</body>   
+      <div class="footer">
+        <footer>
+          <h1><strong> FIND US </strong></h1>
+          <a href="https://www.instagram.com/johnbrown.visual/" target="_blank"
+            ><img
+              style="width: 10px; height: 10px"
+              src="Photos/instagram.png"
+              alt="Instagram Link Of JOHN BROWN"
+              id="IG"
+          /></a>
+          <a href="mailto:johnbrown.visuals@gmail.com" target="_blank"
+            ><img
+              style="width: 10px; height: 10px"
+              src="Photos/gmail.png"
+              alt=" Send Mail To JOHN BROWN"
+              id="Mail"
+          /></a>
+          <a href="https://wa.me/5491127201283" target="_blank"
+            ><img
+              style="width: 10px; height: 10px"
+              src="Photos/whatsapp.png"
+              alt=" Send Message To JOHN BROWN"
+              id="Whatsapp"
+          /></a>
+          <a href="tel:5491127201283" target="_blank"
+            ><img
+              style="width: 10px; height: 10px"
+              src="Photos/viber.png"
+              alt=" Call To +54 9 11 2720 1283"
+              id="Whatsapp"
+          /></a>
+        </footer>
+      </div>
+    </section>
+  </body>
 </html>

@@ -1,7 +1,7 @@
-/* Animación de aves y fondo montañosoarbolado */
+/* Animación de aves y fondo montañoso-arbolado */
 
 .container-all {
-  z-index: 1;
+  z-index: 0;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -9,9 +9,10 @@
   justify-content: center;
   min-height: 100vh;
   background-image: linear-gradient(to bottom, rgba(255, 168, 76, 0.6) 0%, rgba(255, 123, 13, 0.6) 100%), url("https://images.unsplash.com/photo-1446824505046-e43605ffb17f");
-  background-blend-mode: soft-light;
+  background-blend-mode: color-burn;
   background-size: cover;
   background-position: center center;
+ 
   padding: 2rem;
 }
 
