@@ -42,7 +42,7 @@ body {
 header {
   background: white;
   opacity: 85%;
-  background-position-y: 0%;
+ /*  background-position-y: 0%; */
   color: rgb(0, 0, 0);
 }
 

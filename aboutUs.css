@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Arima+Madurai:300");
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 /* html,
 body {
   height: 100%;
@@ -9,7 +9,7 @@ body {
 } */
 
 .aboutUs-container {
-  font-family:"Roboto" ;
+  font-family: "Roboto";
   color: #1e2d32;
   background-color: #ca9954;
 }
@@ -37,53 +37,50 @@ body {
   color: #1e2d32;
   padding: 20px;
 }
+
 .aboutUs-img-container {
   position: relative;
 }
 .aboutUs-floatleft {
   float: left;
-  border-radius: 20%;
+  border-radius: 10%;
 }
 .aboutUs-floatrigth {
   float: right;
-  border-radius: 20%;
+  border-radius: 10%;
 }
 .aboutUs-texto-resaltado {
   font-size: large;
   font-weight: bold;
 }
 
-img.aboutUs-floatleft:hover {
-  bottom: 20px;
-  background-color: rgb(2, 2, 24);
-  border-radius: 40%;
-}
 
-img.aboutUs-floatrigth:hover {
-  right: 0px;
-  top: 0px;
-  background-color: rgb(2, 2, 24);
-  border-radius: 40%;
-}
 
 @media screen and (min-width: 1000px) {
   .aboutUs-floatleft {
     float: left;
-    border-radius: 20%;
+    border-radius: 10%;
     height: 250px;
     width: 250px;
   }
   .aboutUs-floatrigth {
     float: right;
-    border-radius: 20%;
+    border-radius: 10%;
     height: 250px;
     width: 250px;
   }
 }
 
-/*  @media screen and (width: 600px) {
-    img {
-        height: 100px;
-        width: 100px;
-    }
-  }  */
+@media screen and (max-width: 500px) {
+
+  .aboutUs-white-background {
+    display: block;
+  }
+  .aboutUs-white-background p {
+    border-bottom: 4px solid #1e2d32;
+    border-radius: 10%;
+    padding: 10px;
+    box-shadow: 2px 2px 5px  #1e2d32;
+   margin-left: 2px;
+  }
+}
