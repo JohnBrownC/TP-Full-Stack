@@ -1,0 +1,72 @@
+
+.contact h1 {
+    color: #ededed;
+    text-align: center;
+    
+}
+.contact p {
+    color: #ededed;
+    text-align: center;  
+}
+.contact {
+    background-color: #1d1c27;
+   padding: 50px;
+}
+.underline{
+    color:#37ff98;
+    border-bottom: 3px solid #37ff98;
+    box-shadow: 1px 4px 5px #37ff98;
+    position: relative;
+    top: -8px;
+    left: 45%;
+    width: 10%;
+    height: auto;
+}
+
+
+
+
+
+form {
+  border: 2px solid rgb(255, 255, 255);
+  padding: 30px;
+  box-shadow: 3px 4px 5px #37ff98;
+  margin: auto;
+  max-width: 500px;
+}
+
+/* Style the labels */
+label {
+  color: #ededed;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Style the form inputs */
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 5px rgb(255, 255, 255);
+  width: 100%;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Change submit button background color on hover */
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+}

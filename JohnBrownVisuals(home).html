@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="visuals.css" />
     <script src="visuals.js"></script>
     <link rel="stylesheet" href="aboutUs.css" />
-    <link rel="stylesheet" href="animations.css"
+    <link rel="stylesheet" href="animations.css" />
+    <link rel="stylesheet" href="contactus.css"/>
   </head>
   <body>
     <div id="homeback">
@@ -33,40 +34,82 @@
   </nav>
 </header>  -->
       <header
+        class="header"
         style="
           position: fixed;
           top: 0;
           width: 100%;
           z-index: 1;
           box-shadow: 0px 0px 100px #000000;
+          height: 12vh;
+          display: flex;
+          align-items: center;
         "
       >
-        <div
-          class="header-container"
-          style="
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            align-items: center;
-            height: 12vh;
-          "
-        >
-          <a href="Home.html"> HOME </a>
+        <nav style="position: relative; margin-left: 2px; background: none;">
+          <button
+            id="hamburBtn"
+            class="hamburguerBtn"
+            onclick="openCloseMenubar()"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              fill="currentColor"
+              class="bi bi-list"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+          </button>
+         
+          <div id="nav-menu" class="nav-menu">
+            <div>
+              <a href="#Home"> <button class="nav-btn"  onclick="removeAnchorFromURL();openCloseMenubar()">HOME</button> </a>
+
+              <a href="#Galleries">
+                <button class="nav-btn" onclick="removeAnchorFromURL();openCloseMenubar()">
+                  GALLERIE
+                </button></a
+              >
+
+              <a href="#Contactus">
+                <button class="nav-btn" onclick="removeAnchorFromURL();openCloseMenubar()">
+                  CONTACT
+                </button>
+              </a>
+
+              <a
+                href="#AboutUs"
+                onclick="removeAnchorFromURL();openCloseMenubar()"
+              >
+                <button class="nav-btn">ABOUT US</button>
+              </a>
+            </div>
+          </div>
+        </nav>
+        <div class="header-container">
+          <a href="#Home" onclick="removeAnchorFromURL()"> HOME </a>
 
           <a href="#Galleries"> GALLERIES </a>
           <a
             id="John Brown"
             style="font-size: 25px"
-            href="JohnBrownVisuals(home).html"
+            href="#"
+            onclick="removeAnchorFromURL()"
           >
             JOHN BROWN VISUALS</a
           >
           <a href="#AboutUs" onclick="removeAnchorFromURL()"> ABOUT US </a>
-          <a href="Contactus.html"> CONTACT </a>
+          <a href="#Contactus" onclick="removeAnchorFromURL()"> CONTACT </a>
         </div>
       </header>
 
-      <section id="Home">
+      <section id="Home" style="margin-top: 12vh">
         <main>
           <div class="paragraph">
             <h1>Photography</h1>
@@ -82,7 +125,173 @@
       </section>
     </div>
     <!-- <hr class="hr">-->
-    <section id="Galleries"></section>
+    <section id="Galleries">
+      <div class="gallerycontainer">
+        <div class="gallery__item">
+          <img
+            src="Photos\imagenes galeria\C2.jpg"
+            class="gallery__img"
+            loading="lazy"
+          />
+          <h2 class="gallery--title">imagen1</h2>
+        </div>
+
+        <div class="gallery__item">
+          <img
+            src="Photos\imagenes galeria\C3.jpg"
+            class="gallery__img"
+            loading="lazy"
+          />
+          <h2 class="gallery--title">imagen2</h2>
+        </div>
+
+        <div class="gallery__item">
+          <img
+            src="Photos\imagenes galeria\C4.jpg"
+            class="gallery__img"
+            loading="lazy"
+          />
+          <h2 class="gallery--title">imagen3</h2>
+        </div>
+
+        <div class="gallery__item">
+          <img
+            src="Photos\imagenes galeria\C5.jpg"
+            class="gallery__img"
+            loading="lazy"
+          />
+          <h2 class="gallery--title">imagen4</h2>
+        </div>
+        <div class="gallery__item">
+          <img
+            src="Photos\imagenes galeria\C6.jpg"
+            class="gallery__img"
+            loading="lazy"
+          />
+          <h2 class="gallery--title">imagen5</h2>
+        </div>
+        <div class="gallery__item">
+          <img
+            src="Photos\imagenes galeria\C7.jpg"
+            class="gallery__img"
+            loading="lazy"
+          />
+          <h2 class="gallery--title">imagen6</h2>
+        </div>
+        <div class="gallery__item">
+          <img
+            src="Photos\imagenes galeria\C8.jpg"
+            class="gallery__img"
+            loading="lazy"
+          />
+          <h2 class="gallery--title">imagen7</h2>
+        </div>
+        <div class="gallery__item">
+          <img
+            src="Photos\imagenes galeria\C9.jpg"
+            class="gallery__img"
+            loading="lazy"
+          />
+          <h2 class="gallery--title">imagen8</h2>
+        </div>
+        <div class="gallery__item">
+          <img
+            src="Photos\imagenes galeria\C10.jpg"
+            class="gallery__img"
+            loading="lazy"
+          />
+          <h2 class="gallery--title">imagen9</h2>
+        </div>
+        <div class="gallery__item">
+          <img
+            src="Photos\imagenes galeria\M1.jpg"
+            class="gallery__img"
+            loading="lazy"
+          />
+          <h2 class="gallery--title">imagen10</h2>
+        </div>
+        <div class="gallery__item">
+          <img
+            src="Photos\imagenes galeria\M2.jpg"
+            class="gallery__img"
+            loading="lazy"
+          />
+          <h2 class="gallery--title">imagen11</h2>
+        </div>
+        <div class="gallery__item">
+          <img
+            src="Photos\imagenes galeria\M3.jpg"
+            class="gallery__img"
+            loading="lazy"
+          />
+          <h2 class="gallery--title">imagen12</h2>
+        </div>
+        <div class="gallery__item">
+          <img
+            src="Photos\imagenes galeria\M4.jpg"
+            class="gallery__img"
+            loading="lazy"
+          />
+          <h2 class="gallery--title">imagen13</h2>
+        </div>
+        <div class="gallery__item">
+          <img
+            src="Photos\imagenes galeria\R1.jpg"
+            class="gallery__img"
+            loading="lazy"
+          />
+          <h2 class="gallery--title">imagen14</h2>
+        </div>
+        <div class="gallery__item">
+          <img
+            src="Photos\imagenes galeria\R2.jpg"
+            class="gallery__img"
+            loading="lazy"
+          />
+          <h2 class="gallery--title">imagen15</h2>
+        </div>
+        <div class="gallery__item">
+          <img
+            src="Photos\imagenes galeria\R3.jpg"
+            class="gallery__img"
+            loading="lazy"
+          />
+          <h2 class="gallery--title">imagen16</h2>
+        </div>
+        <div class="gallery__item">
+          <img
+            src="Photos\imagenes galeria\R4.jpg"
+            class="gallery__img"
+            loading="lazy"
+          />
+          <h2 class="gallery--title">imagen17</h2>
+        </div>
+        <div class="gallery__item">
+          <img
+            src="Photos\imagenes galeria\R5.jpg"
+            class="gallery__img"
+            loading="lazy"
+          />
+          <h2 class="gallery--title">imagen18</h2>
+        </div>
+        <div class="gallery__item">
+          <img
+            src="Photos\imagenes galeria\R6.jpg"
+            class="gallery__img"
+            loading="lazy"
+          />
+          <h2 class="gallery--title">imagen19</h2>
+        </div>
+        <div class="gallery__item">
+          <img
+            src="Photos\imagenes galeria\R7.jpg"
+            class="gallery__img"
+            loading="lazy"
+          />
+          <h2 class="gallery--title">imagen20</h2>
+        </div>
+      </div>
+    </section>
     <section id="AboutUs">
       <div class="aboutUs">
         <div class="aboutUs-container">
@@ -212,40 +421,64 @@
       </div>
     </section>
 
-    <section id="Contact">
-      <div class="footer">
-        <footer>
-          <h1><strong> FIND US </strong></h1>
-          <a href="https://www.instagram.com/johnbrown.visual/" target="_blank"
-            ><img
-              style="width: 10px; height: 10px"
-              src="Photos/instagram.png"
-              alt="Instagram Link Of JOHN BROWN"
-              id="IG"
-          /></a>
-          <a href="mailto:johnbrown.visuals@gmail.com" target="_blank"
-            ><img
-              style="width: 10px; height: 10px"
-              src="Photos/gmail.png"
-              alt=" Send Mail To JOHN BROWN"
-              id="Mail"
-          /></a>
-          <a href="https://wa.me/5491127201283" target="_blank"
-            ><img
-              style="width: 10px; height: 10px"
-              src="Photos/whatsapp.png"
-              alt=" Send Message To JOHN BROWN"
-              id="Whatsapp"
-          /></a>
-          <a href="tel:5491127201283" target="_blank"
-            ><img
-              style="width: 10px; height: 10px"
-              src="Photos/viber.png"
-              alt=" Call To +54 9 11 2720 1283"
-              id="Whatsapp"
-          /></a>
-        </footer>
-      </div>
+    <section id="Contactus" class="contact">
+      <section>
+        <h1 class="contact"> Contact US</h1>
+        <div class="underline"></div>
+        <p class="contact" >Ask us anything, or share your feedback.</p>
     </section>
+    <section>
+        <form>
+            <form action="/submit-form" method="post" onsubmit="return false">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <label><input type="checkbox" name="agree" id="agree" > I agree to the terms and conditions</label><br><br>
+                <input type="submit" value="Submit" onclick="contactUsValidations()">
+                
+              </form>
+              
+           
+            
+           
+    </section>
+    
+    </section>
+    <div class="footer">
+      <footer>
+        <h1><strong> FIND US </strong></h1>
+        <a href="https://www.instagram.com/johnbrown.visual/" target="_blank"
+          ><img
+            style="width: 10px; height: 10px"
+            src="Photos/instagram.png"
+            alt="Instagram Link Of JOHN BROWN"
+            id="IG"
+        /></a>
+        <a href="mailto:johnbrown.visuals@gmail.com" target="_blank"
+          ><img
+            style="width: 10px; height: 10px"
+            src="Photos/gmail.png"
+            alt=" Send Mail To JOHN BROWN"
+            id="Mail"
+        /></a>
+        <a href="https://wa.me/5491127201283" target="_blank"
+          ><img
+            style="width: 10px; height: 10px"
+            src="Photos/whatsapp.png"
+            alt=" Send Message To JOHN BROWN"
+            id="Whatsapp"
+        /></a>
+        <a href="tel:5491127201283" target="_blank"
+          ><img
+            style="width: 10px; height: 10px"
+            src="Photos/viber.png"
+            alt=" Call To +54 9 11 2720 1283"
+            id="Whatsapp"
+        /></a>
+      </footer>
+    </div>
   </body>
 </html>
