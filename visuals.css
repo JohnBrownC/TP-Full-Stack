@@ -58,7 +58,7 @@ a {
 
 .paragraph {
   width: 98%;
-  height: 50%;
+
   padding: 10px;
   border: 1px solid black;
   margin: 5px;
@@ -79,6 +79,10 @@ border: none;
 .paragraph button:hover{
   background-color: #3ca93c;
 }
+.paragraph p{
+  
+ text-align: justify;
+}
 .hr {
   border: none;
   border-top: 3px solid rgb(255, 255, 255);
@@ -90,8 +94,8 @@ border: none;
 
 /* Page de galeries */
 .titulo-galeria {
-  padding-top: 50px;
-  height: 400px;
+  padding-top: 250px;
+  height: 100vh;
   width: 100%;
   font-family: "Arima Madurai", cursive;
   color: white;
@@ -156,7 +160,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 .gallery__item:nth-child(20) {
   grid-column-start: span 2;
 }
-.gallery--title {
+/* .gallery--title {
   position: absolute;
   bottom: 0%;
   width: 100%;
@@ -166,10 +170,10 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   font-size: 14px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
+} */
 /* Pied de page */
 .footer {
-  height: 10vh;
+  height: 20vh;
   background-color: #113311;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='348' height='348' viewBox='0 0 20 20'%3E%3Cg %3E%3Cpolygon fill='%23242' points='20 10 10 0 0 0 20 20'/%3E%3Cpolygon fill='%23242' points='0 10 0 20 10 20'/%3E%3C/g%3E%3C/svg%3E");
  color: aliceblue;
@@ -180,7 +184,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 .footer h1 {
-  font-size: 19px;
+  font-size: 24px;
   position: relative;
   top: 4px;
   left: auto;
@@ -223,6 +227,8 @@ header {
 .header-container a{
   color: aliceblue;
   font-family: "Arima Madurai", cursive;
+  font-size: 24px;
+  font-weight: bold;
 }
 .hamburguerBtn {
   display: none;
