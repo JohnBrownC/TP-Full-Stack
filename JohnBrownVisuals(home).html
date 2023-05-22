@@ -408,14 +408,8 @@
       </div>
     </section>
 
-    <section id="Contactus" class="contact"style="position: relative;">
-      <iframe
-          id="terms"
-          class="iframe"
-         
-        >
-       
-        </iframe>
+    <section id="Contactus" class="contact" style="position: relative">
+      <iframe id="terms" class="iframe" > </iframe>
       <h1 class="contact">Contactanos</h1>
       <div class="underline"></div>
       <p class="contact">
@@ -430,10 +424,15 @@
         <label for="message">Mensaje:</label>
         <textarea id="message" name="message" style="resize: none"></textarea>
         <label
-          ><input type="checkbox" name="agree" id="agree" /> Acepto los terminos
+          ><input type="checkbox" name="agree" id="agree" /> Acepto los términos
           y condiciones</label
         ><br /><br />
-        <button type="button" onclick="showTerms()">Mostrar terminos y condiciones</button>
+        <label
+          id="show-hide-terms"
+          style="cursor: pointer"
+          onclick="showTerms()"
+          >ver términos y condiciones</label
+        >
         <input
           type="submit"
           value="Enviar"

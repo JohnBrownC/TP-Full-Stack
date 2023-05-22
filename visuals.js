@@ -85,9 +85,14 @@ fetch("terminosYcondiciones.txt")
     terms.open();
     terms.write(tempDoc.outerHTML);
     terms.close();
+   
   })
   .catch((error) => console.error(error));
 
 const showTerms = () => {
+  let showLabel = document.getElementById("show-hide-terms");
   iframe.hidden = !iframe.hidden;
+  iframe.hidden
+    ? (showLabel.textContent = "ver términos y condiciones")
+    : (showLabel.textContent = "ocultar términos y condiciones");
 };
