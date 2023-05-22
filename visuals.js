@@ -71,6 +71,7 @@ const contactUsValidations = (event) => {
 
 //Mostrar en iframe los terminos y condiciones del sitio
 let iframe = document.getElementById("terms");
+iframe.hidden = true;
 let terms = iframe.contentDocument;
 
 fetch("terminosYcondiciones.txt")
@@ -78,12 +79,15 @@ fetch("terminosYcondiciones.txt")
   .then((data) => {
     // Paso 2: Crea un documento temporal para mantener el formato del txt
     let tempDoc = document.createElement("html");
-    tempDoc.style.color="white"
+    tempDoc.style.color = "white";
     tempDoc.innerHTML = "<pre>" + data + "</pre>";
     // Paso 3: se completa el iframe con la data
     terms.open();
     terms.write(tempDoc.outerHTML);
     terms.close();
-   
   })
   .catch((error) => console.error(error));
+
+const showTerms = () => {
+  iframe.hidden = !iframe.hidden;
+};
