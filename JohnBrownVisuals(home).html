@@ -5,7 +5,6 @@
     <title>John Brown Visuals</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="visuals.css" />
-    <script src="visuals.js"></script>
 
     <link rel="stylesheet" href="aboutUs.css" />
     <link rel="stylesheet" href="animations.css" />
@@ -98,7 +97,7 @@
         </div>
       </header>
 
-      <section id="Home" style="margin-top: 12vh">
+      <section id="Home" style="margin-top: 12vh; height: auto">
         <main>
           <div class="paragraph">
             <h1>Fotografía</h1>
@@ -117,26 +116,23 @@
               <button onclick="manageAdvises(true)">Siguiente</button>
             </div>
           </div>
-          <section id="slider">
-            <div class="slider-wrapper">
-              <div id="slider-text" class="slider-text moving-text"></div>
-              <div class="slider">
-                <img id="slider-img" src="#" alt="slider" />
-              </div>
-              <div id="slider-nav" class="slider-nav">
-                <!-- javascript hará su magia aquí -->
-              </div>
-            </div>
-          </section>
         </main>
+      </section>
+      <section id="slider">
+        <div class="slider-wrapper">
+          <div id="slider-text" class="slider-text moving-text"></div>
+          <div class="slider">
+            <img id="slider-img" src="#" alt="slider" />
+          </div>
+          <div id="slider-nav" class="slider-nav">
+            <!-- javascript hará su magia aquí -->
+          </div>
+        </div>
       </section>
     </div>
     <!-- <hr class="hr">-->
     <section id="Galleries">
-      <div id="titulo-gallerie" class="titulo-galeria" >
-       
-        Nuestra Galería
-      </div>
+      <div id="titulo-gallerie" class="titulo-galeria">Nuestra Galería</div>
       <div class="gallerycontainer">
         <div class="gallery__item">
           <img
@@ -412,30 +408,42 @@
       </div>
     </section>
 
-    <section id="Contactus" class="contact">
+    <section id="Contactus" class="contact"style="position: relative;">
+      <iframe
+          id="terms"
+          class="iframe"
+         
+        >
+        <style>
+          body{
+            color: antiquewhite;
+          }
+        </style>
+        </iframe>
       <h1 class="contact">Contactanos</h1>
       <div class="underline"></div>
       <p class="contact">
         PREGUNTA LO QUE GUSTES O COMPARTE TU EXPERIENCIA EN EL SITIO.
       </p>
 
-      <form action="/submit-form" method="post" onsubmit="return false">
+      <form id="form" onsubmit="return false">
         <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" required /><br /><br />
+        <input type="text" id="name" name="name" /><br /><br />
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required /><br /><br />
+        <input type="email" id="email" name="email" /><br /><br />
         <label for="message">Mensaje:</label>
-        <textarea
-          id="message"
-          name="message"
-          style="resize: none"
-          required
-        ></textarea>
+        <textarea id="message" name="message" style="resize: none"></textarea>
         <label
           ><input type="checkbox" name="agree" id="agree" /> Acepto los terminos
           y condiciones</label
         ><br /><br />
-        <input type="submit" value="Enviar" onclick="contactUsValidations()" />
+        
+        <input
+          type="submit"
+          value="Enviar"
+          id="submit-button"
+          onclick="contactUsValidations(event)"
+        />
       </form>
     </section>
 
@@ -472,7 +480,18 @@
         /></a>
       </footer>
     </div>
+    <!-- se llaman acá porque primero hay que declarar los elementos que se 
+    controlan con estos script -->
     <script src="slider.js"></script>
     <script src="consejos.js"></script>
+    <script src="visuals.js"></script>
+    <!--scripts para eviar emails  -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      emailjs.init("apOGt58dLRwB7sVfr"); //No divulgar please!!!! aunque sea una key pública
+    </script>
   </body>
 </html>
