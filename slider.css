@@ -1,0 +1,91 @@
+/*-----------------Pseudo-Carrousel-----------------------*/
+@import url("https://fonts.googleapis.com/css?family=Arima+Madurai:300");
+
+.slider-wrapper {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.slider {
+  display: flex;
+  aspect-ratio: 16 / 7.5;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 0.25rem 0.5rem #21212126;
+  border-radius: 0.5rem;
+  filter: brightness(0.5);
+  z-index: 0;
+}
+.slider-text {
+  position: absolute;
+  font-family: "Arima Madurai", cursive;
+  color: white;
+  font-size: 34px;
+  letter-spacing: 3px;
+  text-shadow: 0px 1px 1px black;
+  user-select: none;
+  z-index: 1;
+  width: 40%;
+  left: 5%;
+  top: 3%;
+  padding: 10px;
+  line-height: 40px;
+ background-color: rgba(0, 0, 0, 0.404);
+}
+.slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+
+.slider-nav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+ ;
+}
+
+.slider-nav p {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+  user-select: none;
+  cursor: pointer;
+}
+
+.slider-nav a:hover {
+  opacity: 100%;
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.moving-text {
+  animation: moveLeft 2s linear  ;
+}
+
+@media only screen and (max-width: 768px) {
+  .slider {
+    aspect-ratio: 8 / 16;
+  }
+  .slider-text {
+    
+    font-size: 20px;
+ 
+    
+  }
+}

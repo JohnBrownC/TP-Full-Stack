@@ -80,12 +80,11 @@ fetch("terminosYcondiciones.txt")
     // Paso 2: Crea un documento temporal para mantener el formato del txt
     let tempDoc = document.createElement("html");
     tempDoc.style.color = "white";
-    tempDoc.innerHTML = "<pre>" + data + "</pre>";
-    // Paso 3: se completa el iframe con la data
+    tempDoc.innerHTML = "<pre><small >" + data + "</small></pre>";
+    tempDoc.scrollWidth=5    // Paso 3: se completa el iframe con la data
     terms.open();
     terms.write(tempDoc.outerHTML);
     terms.close();
-   
   })
   .catch((error) => console.error(error));
 

@@ -1,3 +1,5 @@
+
+
 // array con las fotos
 const photosArray = [
   "Photos/imagenes galeria/C1.jpg",
@@ -126,3 +128,5 @@ setInterval(() => {
   slider.src = photosArray[currentIndexPhoto];
   slider_text.textContent = phrasesArray[currentIndexText];
 }, 10000);
+
+

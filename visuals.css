@@ -230,6 +230,9 @@ header {
   font-size: 24px;
   font-weight: bold;
 }
+.titlePrincipalMobil{
+  display: none;
+}
 .hamburguerBtn {
   display: none;
   height: 60px;
@@ -267,6 +270,11 @@ header {
   }
   .hamburguerBtn {
     display: block;
+   
+  }
+  .titlePrincipalMobil{
+    display: block;
+    margin-left: 10%;
   }
   .nav-menu {
     display: none;
