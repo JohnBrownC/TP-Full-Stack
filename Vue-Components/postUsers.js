@@ -41,11 +41,16 @@ Vue.component("newuser", {
       let userArray = Object.entries(userData);
       console.log(userArray);
       //Si los campos están vacios se devuelve un alert
+      let stop = false;
       for (let i = 0; i < userArray.length; i++) {
         if (userArray[i][1] === "") {
           alert("Todos los campos son necesarios");
+          stop = true;
           break; // Break out of the loop when the condition is met
         }
+      }
+      if (stop) {//corta la función aquí
+        return;
       }
       // Se hace el post al server
       // Realizar la solicitud POST utilizando fetch

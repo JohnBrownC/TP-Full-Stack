@@ -1,14 +1,19 @@
 Vue.component("postmensajes", {
   template: `
       <div>
-        <h1>Formulario de Comentarios</h1>
-  
-        <form @submit.prevent="enviarComentario">
-          <label for="comment">Comentario:</label>
+      <div id="iniciasesionmensajes" style="display:block;">
+      <h1>Inicia sesión para dejar un mensaje</h1>
+      </div>
+        
+      <div id="formulario-mensajes" style="display:none;" >
+      <h1 >Formulario de Comentarios</h1>
+      <form  @submit.prevent="enviarComentario"> 
+      <label for="comment">Comentario:</label>
           <input type="text" id="comment" v-model="comment" placeholder="Escribe tu comentario..." required>
   
           <button type="submit">Enviar</button>
         </form>
+        </div>
       </div>
     `,
   data() {
@@ -26,8 +31,8 @@ Vue.component("postmensajes", {
         },
         body: JSON.stringify({
           content: this.comment,
-          user_id: 2,
-          title: "el nombre",
+          user_id: localStorage.getItem("user_id"),
+          title: localStorage.getItem("user_name"),
         }),
       })
         .then((response) => {
