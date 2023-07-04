@@ -3,488 +3,506 @@
   <head>
     <meta charset="UTF-8" />
     <title>John Brown Visuals</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="visuals.css" />
     <link rel="stylesheet" href="aboutUs.css" />
     <link rel="stylesheet" href="animations.css" />
     <link rel="stylesheet" href="contactus.css" />
     <link rel="stylesheet" href="slider.css" />
+    <link rel="stylesheet" href="vueCSS.css" />
+    <link rel="stylesheet" href="modals.css" />
   </head>
   <body>
-    <div id="homeback">
-      <header
-        class="header"
-        style="
-          position: fixed;
-          top: 0;
-          width: 100%;
-          z-index: 10;
-          box-shadow: 0px 0px 100px #000000;
-          height: 12vh;
-          display: flex;
-          align-items: center;
-        "
-      >
-        <nav style="position: relative; margin-left: 2px; background: none">
-          <div
-            style="
-              display: flex;
-              align-items: center;
-             width: 100%;
-            "
-          >
-            <button
-              id="hamburBtn"
-              class="hamburguerBtn"
-              onclick="openCloseMenubar()"
-            >
-              <!-- Fontawesome -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="40"
-                height="40"
-                fill="currentColor"
-                class="bi bi-list"
-                viewBox="0 0 16 16"
+    <div id="app">
+      <div id="homeback">
+        <header
+          class="header"
+          style="
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+            box-shadow: 0px 0px 100px #000000;
+            height: 12vh;
+            display: flex;
+            align-items: center;
+          "
+        >
+          <nav style="position: relative; margin-left: 2px; background: none">
+            <div style="display: flex; align-items: center; width: 100%">
+              <button
+                id="hamburBtn"
+                class="hamburguerBtn"
+                onclick="openCloseMenubar()"
               >
-                <path
-                  fill-rule="evenodd"
-                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-                />
-              </svg>
-            </button>
-            <h1 class="titlePrincipalMobil">JhonBrownVisuals</h1>           
-          </div>
-          <div id="nav-menu" class="nav-menu">
-            <div>
-              <a href="#">
-                <button
-                  class="nav-btn"
-                  onclick="removeAnchorFromURL();openCloseMenubar()"
+                <!-- Fontawesome -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  fill="currentColor"
+                  class="bi bi-list"
+                  viewBox="0 0 16 16"
                 >
-                  INICIO
-                </button>
-              </a>
+                  <path
+                    fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                  />
+                </svg>
+              </button>
+              <h1 class="titlePrincipalMobil">JhonBrownVisuals</h1>
+            </div>
+            <div id="nav-menu" class="nav-menu">
+              <div>
+                <a href="#">
+                  <button
+                    class="nav-btn"
+                    onclick="removeAnchorFromURL();openCloseMenubar()"
+                  >
+                    INICIO
+                  </button>
+                </a>
 
-              <a href="#Galleries">
-                <button
-                  class="nav-btn"
+                <a href="#Galleries">
+                  <button
+                    class="nav-btn"
+                    onclick="removeAnchorFromURL();openCloseMenubar()"
+                  >
+                    GALERIA
+                  </button></a
+                >
+
+                <a
+                  href="#AboutUs"
                   onclick="removeAnchorFromURL();openCloseMenubar()"
                 >
-                  GALERIA
-                </button></a
-              >
-             
-              <a
-                href="#AboutUs"
-                onclick="removeAnchorFromURL();openCloseMenubar()"
-              >
-                <button class="nav-btn">QUIENES SOMOS?</button>
-              </a>
-              <a href="#Contactus">
-                <button
-                  class="nav-btn"
-                  onclick="removeAnchorFromURL();openCloseMenubar()"
-                >
-                  CONTACTO
-                </button>
-              </a>
+                  <button class="nav-btn">QUIENES SOMOS?</button>
+                </a>
+                <a href="#Contactus">
+                  <button
+                    class="nav-btn"
+                    onclick="removeAnchorFromURL();openCloseMenubar()"
+                  >
+                    CONTACTO
+                  </button>
+                </a>
+              </div>
+            </div>
+          </nav>
+          <div class="header-container">
+            <a href="#" onclick="removeAnchorFromURL()"> INICIO </a>
+
+            <a href="#Galleries"> GALERIA </a>
+
+            <a href="#"> JhonBrownVisuals </a>
+            <a href="#AboutUs" onclick="removeAnchorFromURL()">
+              QUIENES SOMOS?
+            </a>
+            <a href="#Contactus" onclick="removeAnchorFromURL()"> CONTACTO </a>
+
+            <login
+              id="loginIcon"
+              onclick="showAuthModal()"
+              style="cursor: pointer"
+            ></login>
+
+            
+            <div id="loginModal" class="modal">
+              <div class="modal-content">
+                <newuser id="newuserform" style="display: none;"></newuser>
+                <loginform id="loginform"></loginform>
+                <button style="margin-top: 10px;" onclick="closeModal()">Cerrar</button>
+              </div>
             </div>
           </div>
-         
-        </nav>
-        <div class="header-container">
-          <a href="#" onclick="removeAnchorFromURL()"> INICIO </a>
+        </header>
 
-          <a href="#Galleries"> GALERIA </a>
+        <section id="Home" style="margin-top: 12vh; height: auto">
+          <main>
+            <div class="paragraph">
+              <h1>Fotografía</h1>
+              <p>
+                El arte de la fotografía es una forma de explorar el mundo que
+                nos rodea, para capturar momentos de belleza, alegría, y el
+                dolor, y compartirlos con los demás.
+              </p>
+            </div>
+            <div class="paragraph">
+              <h1>25 Consejos útiles</h1>
+              <h1 id="advise-title"><!-- controlado por consejos.js --></h1>
+              <p id="advise-content"><!-- controlado pos consejos.js --></p>
+              <div style="display: flex; justify-content: space-between">
+                <button onclick="manageAdvises(false)">Anterior</button>
+                <button onclick="manageAdvises(true)">Siguiente</button>
+              </div>
+            </div>
+          </main>
+        </section>
+        <section id="slider">
+          <div class="slider-wrapper">
+            <div id="slider-text" class="slider-text moving-text"></div>
+            <div class="slider">
+              <img id="slider-img" src="#" alt="slider" />
+            </div>
+            <div id="slider-nav" class="slider-nav">
+              <!-- javascript hará su magia aquí -->
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- <hr class="hr">-->
+      <section id="Galleries">
+        <div id="titulo-gallerie" class="titulo-galeria">Nuestra Galería</div>
+        <div class="gallerycontainer">
+          <div class="gallery__item">
+            <img
+              src="Photos\imagenes galeria\C2.jpg"
+              class="gallery__img"
+              loading="lazy"
+            />
+          </div>
 
-          <a href="#"> JhonBrownVisuals </a>
-          <a href="#AboutUs" onclick="removeAnchorFromURL()">
-            QUIENES SOMOS?
-          </a>
-          <a href="#Contactus" onclick="removeAnchorFromURL()"> CONTACTO </a>
+          <div class="gallery__item">
+            <img
+              src="Photos\imagenes galeria\C3.jpg"
+              class="gallery__img"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="gallery__item">
+            <img
+              src="Photos\imagenes galeria\C4.jpg"
+              class="gallery__img"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="gallery__item">
+            <img
+              src="Photos\imagenes galeria\C5.jpg"
+              class="gallery__img"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery__item">
+            <img
+              src="Photos\imagenes galeria\C6.jpg"
+              class="gallery__img"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery__item">
+            <img
+              src="Photos\imagenes galeria\C7.jpg"
+              class="gallery__img"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery__item">
+            <img
+              src="Photos\imagenes galeria\C8.jpg"
+              class="gallery__img"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery__item">
+            <img
+              src="Photos\imagenes galeria\C9.jpg"
+              class="gallery__img"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery__item">
+            <img
+              src="Photos\imagenes galeria\C10.jpg"
+              class="gallery__img"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery__item">
+            <img
+              src="Photos\imagenes galeria\M1.jpg"
+              class="gallery__img"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery__item">
+            <img
+              src="Photos\imagenes galeria\M2.jpg"
+              class="gallery__img"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery__item">
+            <img
+              src="Photos\imagenes galeria\M3.jpg"
+              class="gallery__img"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery__item">
+            <img
+              src="Photos\imagenes galeria\M4.jpg"
+              class="gallery__img"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery__item">
+            <img
+              src="Photos\imagenes galeria\R1.jpg"
+              class="gallery__img"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery__item">
+            <img
+              src="Photos\imagenes galeria\R2.jpg"
+              class="gallery__img"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery__item">
+            <img
+              src="Photos\imagenes galeria\R3.jpg"
+              class="gallery__img"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery__item">
+            <img
+              src="Photos\imagenes galeria\R4.jpg"
+              class="gallery__img"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery__item">
+            <img
+              src="Photos\imagenes galeria\R5.jpg"
+              class="gallery__img"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery__item">
+            <img
+              src="Photos\imagenes galeria\R6.jpg"
+              class="gallery__img"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery__item">
+            <img
+              src="Photos\imagenes galeria\R7.jpg"
+              class="gallery__img"
+              loading="lazy"
+            />
+          </div>
         </div>
-      </header>
+      </section>
+      <section id="AboutUs">
+        <div class="aboutUs">
+          <div class="aboutUs-container">
+            <div class="container-all">
+              <h1 class="aboutUs-titulo">Acerca de nosotros</h1>
+              <div class="bird-container bird-container--one">
+                <div class="bird bird--one"></div>
+              </div>
 
-      <section id="Home" style="margin-top: 12vh; height: auto">
-        <main>
-          <div class="paragraph">
-            <h1>Fotografía</h1>
-            <p>
-              El arte de la fotografía es una forma de explorar el mundo que nos
-              rodea, para capturar momentos de belleza, alegría, y el dolor, y
-              compartirlos con los demás.
+              <div class="bird-container bird-container--two">
+                <div class="bird bird--two"></div>
+              </div>
+
+              <div class="bird-container bird-container--three">
+                <div class="bird bird--three"></div>
+              </div>
+
+              <div class="bird-container bird-container--four">
+                <div class="bird bird--four"></div>
+              </div>
+            </div>
+            <p class="aboutUs-p" style="text-align: justify">
+              ¡Bienvenidos a nuestro sitio de fotografía! Somos un equipo de
+              cuatro personas que nos conocimos durante el curso de Codo-A-Codo.
+              Juntos compartimos nuestra pasión por capturar momentos y contar
+              historias a través de las imágenes. Nos encanta experimentar con
+              diferentes técnicas y estilos fotográficos, desde la fotografía
+              callejera hasta la fotografía de paisajes y retratos.
+            </p>
+            <div class="aboutUs-white-background">
+              <!-- grid 4*4 -->
+              <div class="aboutUs-img-container">
+                <img
+                  class="aboutUs-floatrigth"
+                  src="./assets/german.jpg"
+                  height="100px"
+                  width="100px"
+                  alt="caritasXD"
+                />
+                <p>
+                  <span class="aboutUs-texto-resaltado">Germán</span>, enamorado
+                  del arte, la buena comida, los amigos y la familia. Eterno
+                  estudiante de programación.
+                </p>
+              </div>
+              <div class="aboutUs-img-container">
+                <img
+                  class="aboutUs-floatrigth"
+                  src="./assets/jhonb.jpeg"
+                  height="100px"
+                  width="100px"
+                  alt="caritasXD"
+                />
+                <p>
+                  I'm <span class="aboutUs-texto-resaltado">John Brown</span> a
+                  IT student from UAI, I am a fullstack Python developer
+                  (junior) and polyglot, I'm a team player and have excellent
+                  communication skills.
+                </p>
+              </div>
+              <div>
+                <img
+                  class="aboutUs-floatleft"
+                  src="./assets/imgPreview.svg"
+                  height="200px"
+                  width="200px"
+                  alt="caritasXD"
+                />
+                <p>
+                  <span class="aboutUs-texto-resaltado">Fran</span> es un
+                  compañero de curso de programación apasionado por la
+                  tecnología y siempre está interesado en aprender cosas nuevas.
+                  Él tiene habilidades en varios lenguajes de programación y le
+                  encanta colaborar en proyectos en equipo. Fran es muy
+                  organizado y siempre cumple con sus tareas en el tiempo
+                  establecido. Además, es un comunicador efectivo y siempre está
+                  dispuesto a ayudar a sus compañeros en todo lo que pueda.
+                </p>
+              </div>
+              <div>
+                <img
+                  class="aboutUs-floatleft"
+                  src="./assets/imgPreview.svg"
+                  height="200px"
+                  width="200px"
+                  alt="caritasXD"
+                />
+                <p>
+                  <span class="aboutUs-texto-resaltado">Clarii</span> es una
+                  compañera de curso de programación muy dedicada y apasionada
+                  por la tecnología. Ella tiene habilidades en varios lenguajes
+                  de programación y siempre está dispuesta a colaborar en
+                  proyectos en equipo. Clarii es muy creativa y siempre aporta
+                  nuevas ideas a los proyectos en los que trabaja. Además, es
+                  muy organizada y tiene una gran habilidad para resolver
+                  problemas técnicos. Clarii es una persona amistosa y
+                  comunicativa, lo que la hace un gran activo en cualquier
+                  equipo.
+                </p>
+              </div>
+            </div>
+            <p class="aboutUs-p">
+              En este sitio, compartiremos las mejores fotos de nuestra
+              <a
+                href="#Galleries"
+                onclick="removeAnchorFromURL()"
+                style="color: rgb(12, 42, 108)"
+                >galería </a
+              >, así como consejos y trucos para mejorar tus habilidades
+              fotográficas. Nos encanta enseñar y aprender de nuestros lectores,
+              así que no dudes en ponerte en
+              <a
+                href="#Contactus"
+                onclick="removeAnchorFromURL()"
+                style="color: rgb(12, 42, 108)"
+                >contacto</a
+              >
+              con nosotros si tienes alguna pregunta o comentario. ¡Esperamos
+              que disfrutes de nuestro sitio tanto como nosotros disfrutamos
+              creándolo!
             </p>
           </div>
-          <div class="paragraph">
-            <h1>25 Consejos útiles</h1>
-            <h1 id="advise-title"><!-- controlado por consejos.js --></h1>
-            <p id="advise-content"><!-- controlado pos consejos.js --></p>
-            <div style="display: flex; justify-content: space-between">
-              <button onclick="manageAdvises(false)">Anterior</button>
-              <button onclick="manageAdvises(true)">Siguiente</button>
-            </div>
-          </div>
-        </main>
-      </section>
-      <section id="slider">
-        <div class="slider-wrapper">
-          <div id="slider-text" class="slider-text moving-text"></div>
-          <div class="slider">
-            <img id="slider-img" src="#" alt="slider" />
-          </div>
-          <div id="slider-nav" class="slider-nav">
-            <!-- javascript hará su magia aquí -->
-          </div>
-        </div>
-      </section>
-    </div>
-    <!-- <hr class="hr">-->
-    <section id="Galleries">
-      <div id="titulo-gallerie" class="titulo-galeria">Nuestra Galería</div>
-      <div class="gallerycontainer">
-        <div class="gallery__item">
-          <img
-            src="Photos\imagenes galeria\C2.jpg"
-            class="gallery__img"
-            loading="lazy"
-          />
-        </div>
-
-        <div class="gallery__item">
-          <img
-            src="Photos\imagenes galeria\C3.jpg"
-            class="gallery__img"
-            loading="lazy"
-          />
-        </div>
-
-        <div class="gallery__item">
-          <img
-            src="Photos\imagenes galeria\C4.jpg"
-            class="gallery__img"
-            loading="lazy"
-          />
-        </div>
-
-        <div class="gallery__item">
-          <img
-            src="Photos\imagenes galeria\C5.jpg"
-            class="gallery__img"
-            loading="lazy"
-          />
-        </div>
-        <div class="gallery__item">
-          <img
-            src="Photos\imagenes galeria\C6.jpg"
-            class="gallery__img"
-            loading="lazy"
-          />
-        </div>
-        <div class="gallery__item">
-          <img
-            src="Photos\imagenes galeria\C7.jpg"
-            class="gallery__img"
-            loading="lazy"
-          />
-        </div>
-        <div class="gallery__item">
-          <img
-            src="Photos\imagenes galeria\C8.jpg"
-            class="gallery__img"
-            loading="lazy"
-          />
-        </div>
-        <div class="gallery__item">
-          <img
-            src="Photos\imagenes galeria\C9.jpg"
-            class="gallery__img"
-            loading="lazy"
-          />
-        </div>
-        <div class="gallery__item">
-          <img
-            src="Photos\imagenes galeria\C10.jpg"
-            class="gallery__img"
-            loading="lazy"
-          />
-        </div>
-        <div class="gallery__item">
-          <img
-            src="Photos\imagenes galeria\M1.jpg"
-            class="gallery__img"
-            loading="lazy"
-          />
-        </div>
-        <div class="gallery__item">
-          <img
-            src="Photos\imagenes galeria\M2.jpg"
-            class="gallery__img"
-            loading="lazy"
-          />
-        </div>
-        <div class="gallery__item">
-          <img
-            src="Photos\imagenes galeria\M3.jpg"
-            class="gallery__img"
-            loading="lazy"
-          />
-        </div>
-        <div class="gallery__item">
-          <img
-            src="Photos\imagenes galeria\M4.jpg"
-            class="gallery__img"
-            loading="lazy"
-          />
-        </div>
-        <div class="gallery__item">
-          <img
-            src="Photos\imagenes galeria\R1.jpg"
-            class="gallery__img"
-            loading="lazy"
-          />
-        </div>
-        <div class="gallery__item">
-          <img
-            src="Photos\imagenes galeria\R2.jpg"
-            class="gallery__img"
-            loading="lazy"
-          />
-        </div>
-        <div class="gallery__item">
-          <img
-            src="Photos\imagenes galeria\R3.jpg"
-            class="gallery__img"
-            loading="lazy"
-          />
-        </div>
-        <div class="gallery__item">
-          <img
-            src="Photos\imagenes galeria\R4.jpg"
-            class="gallery__img"
-            loading="lazy"
-          />
-        </div>
-        <div class="gallery__item">
-          <img
-            src="Photos\imagenes galeria\R5.jpg"
-            class="gallery__img"
-            loading="lazy"
-          />
-        </div>
-        <div class="gallery__item">
-          <img
-            src="Photos\imagenes galeria\R6.jpg"
-            class="gallery__img"
-            loading="lazy"
-          />
-        </div>
-        <div class="gallery__item">
-          <img
-            src="Photos\imagenes galeria\R7.jpg"
-            class="gallery__img"
-            loading="lazy"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="AboutUs">
-      <div class="aboutUs">
-        <div class="aboutUs-container">
-          <div class="container-all">
-            <h1 class="aboutUs-titulo">Acerca de nosotros</h1>
-            <div class="bird-container bird-container--one">
-              <div class="bird bird--one"></div>
-            </div>
-
-            <div class="bird-container bird-container--two">
-              <div class="bird bird--two"></div>
-            </div>
-
-            <div class="bird-container bird-container--three">
-              <div class="bird bird--three"></div>
-            </div>
-
-            <div class="bird-container bird-container--four">
-              <div class="bird bird--four"></div>
-            </div>
-          </div>
-          <p class="aboutUs-p" style="text-align: justify">
-            ¡Bienvenidos a nuestro sitio de fotografía! Somos un equipo de
-            cuatro personas que nos conocimos durante el curso de Codo-A-Codo.
-            Juntos compartimos nuestra pasión por capturar momentos y contar
-            historias a través de las imágenes. Nos encanta experimentar con
-            diferentes técnicas y estilos fotográficos, desde la fotografía
-            callejera hasta la fotografía de paisajes y retratos.
-          </p>
-          <div class="aboutUs-white-background">
-            <!-- grid 4*4 -->
-            <div class="aboutUs-img-container">
-              <img
-                class="aboutUs-floatrigth"
-                src="./assets/german.jpg"
-                height="100px"
-                width="100px"
-                alt="caritasXD"
-              />
-              <p>
-                <span class="aboutUs-texto-resaltado">Germán</span>, enamorado
-                del arte, la buena comida, los amigos y la familia. Eterno
-                estudiante de programación.
-              </p>
-            </div>
-            <div class="aboutUs-img-container">
-              <img
-                class="aboutUs-floatrigth"
-                src="./assets/jhonb.jpeg"
-                height="100px"
-                width="100px"
-                alt="caritasXD"
-              />
-              <p>
-                I'm <span class="aboutUs-texto-resaltado">John Brown</span> a IT
-                student from UAI, I am a fullstack Python developer (junior) and
-                polyglot, I'm a team player and have excellent communication
-                skills.
-              </p>
-            </div>
-            <div>
-              <img
-                class="aboutUs-floatleft"
-                src="./assets/imgPreview.svg"
-                height="200px"
-                width="200px"
-                alt="caritasXD"
-              />
-              <p>
-                <span class="aboutUs-texto-resaltado">Fran</span> es un
-                compañero de curso de programación apasionado por la tecnología
-                y siempre está interesado en aprender cosas nuevas. Él tiene
-                habilidades en varios lenguajes de programación y le encanta
-                colaborar en proyectos en equipo. Fran es muy organizado y
-                siempre cumple con sus tareas en el tiempo establecido. Además,
-                es un comunicador efectivo y siempre está dispuesto a ayudar a
-                sus compañeros en todo lo que pueda.
-              </p>
-            </div>
-            <div>
-              <img
-                class="aboutUs-floatleft"
-                src="./assets/imgPreview.svg"
-                height="200px"
-                width="200px"
-                alt="caritasXD"
-              />
-              <p>
-                <span class="aboutUs-texto-resaltado">Clarii</span> es una
-                compañera de curso de programación muy dedicada y apasionada por
-                la tecnología. Ella tiene habilidades en varios lenguajes de
-                programación y siempre está dispuesta a colaborar en proyectos
-                en equipo. Clarii es muy creativa y siempre aporta nuevas ideas
-                a los proyectos en los que trabaja. Además, es muy organizada y
-                tiene una gran habilidad para resolver problemas técnicos.
-                Clarii es una persona amistosa y comunicativa, lo que la hace un
-                gran activo en cualquier equipo.
-              </p>
-            </div>
-          </div>
-          <p class="aboutUs-p">
-            En este sitio, compartiremos las mejores fotos de nuestra
-            <a
-              href="#Galleries"
-              onclick="removeAnchorFromURL()"
-              style="color: rgb(12, 42, 108)"
-              >galería </a
-            >, así como consejos y trucos para mejorar tus habilidades
-            fotográficas. Nos encanta enseñar y aprender de nuestros lectores,
-            así que no dudes en ponerte en
-            <a
-              href="#Contactus"
-              onclick="removeAnchorFromURL()"
-              style="color: rgb(12, 42, 108)"
-              >contacto</a
-            >
-            con nosotros si tienes alguna pregunta o comentario. ¡Esperamos que
-            disfrutes de nuestro sitio tanto como nosotros disfrutamos
-            creándolo!
-          </p>
-        </div>
-        <!-- <p class="textaboutus">My photography celebrates individuality and inner beauty,<br>
+          <!-- <p class="textaboutus">My photography celebrates individuality and inner beauty,<br>
             telling unique stories in an authentic and inspiring way.<br>
             As a trusted partner, I create portraits <br> that clients will cherish for a lifetime,<br>
             providing access to beautiful and meaningful images.</p> -->
+        </div>
+      </section>
+
+      <section id="Contactus" class="contact" style="position: relative">
+        <iframe id="terms" class="iframe"> </iframe>
+        <h1 class="contact">Contactanos</h1>
+        <div class="underline"></div>
+        <p class="contact">
+          PREGUNTA LO QUE GUSTES O COMPARTE TU EXPERIENCIA EN EL SITIO.
+        </p>
+
+        <form id="form" onsubmit="return false">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" /><br /><br />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" /><br /><br />
+          <label for="message">Mensaje:</label>
+          <textarea id="message" name="message" style="resize: none"></textarea>
+          <label
+            ><input type="checkbox" name="agree" id="agree" /> Acepto los
+            términos y condiciones</label
+          ><br /><br />
+          <label
+            id="show-hide-terms"
+            style="cursor: pointer"
+            onclick="showTerms()"
+            >ver términos y condiciones</label
+          >
+          <input
+            type="submit"
+            value="Enviar"
+            id="submit-button"
+            onclick="contactUsValidations(event)"
+          />
+        </form>
+        <h1 class="">O dejanos un comentario aquí:</h1>
+
+        <mensajes style="margin-top: 50px"></mensajes>
+        <postmensajes></postmensajes>
+      </section>
+
+      <div class="footer">
+        <footer>
+          <h1 style="margin-bottom: 25px"><strong> ENCUENTRANOS </strong></h1>
+          <a href="https://www.instagram.com/johnbrown.visual/" target="_blank"
+            ><img
+              style="width: 50px; height: 50px"
+              src="Photos/instagram.png"
+              alt="Instagram Link Of JOHN BROWN"
+              id="IG"
+          /></a>
+          <a href="mailto:johnbrown.visuals@gmail.com" target="_blank"
+            ><img
+              style="width: 50px; height: 50px"
+              src="Photos/gmail.png"
+              alt=" Send Mail To JOHN BROWN"
+              id="Mail"
+          /></a>
+          <a href="https://wa.me/5491127201283" target="_blank"
+            ><img
+              style="width: 50px; height: 50px"
+              src="Photos/whatsapp.png"
+              alt=" Send Message To JOHN BROWN"
+              id="Whatsapp"
+          /></a>
+          <a href="tel:5491127201283" target="_blank"
+            ><img
+              style="width: 50px; height: 50px"
+              src="Photos/viber.png"
+              alt=" Call To +54 9 11 2720 1283"
+              id="Whatsapp"
+          /></a>
+        </footer>
       </div>
-    </section>
-
-    <section id="Contactus" class="contact" style="position: relative">
-      <iframe id="terms" class="iframe"> </iframe>
-      <h1 class="contact">Contactanos</h1>
-      <div class="underline"></div>
-      <p class="contact">
-        PREGUNTA LO QUE GUSTES O COMPARTE TU EXPERIENCIA EN EL SITIO.
-      </p>
-
-      <form id="form" onsubmit="return false">
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" /><br /><br />
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" /><br /><br />
-        <label for="message">Mensaje:</label>
-        <textarea id="message" name="message" style="resize: none"></textarea>
-        <label
-          ><input type="checkbox" name="agree" id="agree" /> Acepto los términos
-          y condiciones</label
-        ><br /><br />
-        <label
-          id="show-hide-terms"
-          style="cursor: pointer"
-          onclick="showTerms()"
-          >ver términos y condiciones</label
-        >
-        <input
-          type="submit"
-          value="Enviar"
-          id="submit-button"
-          onclick="contactUsValidations(event)"
-        />
-      </form>
-    </section>
-
-    <div class="footer">
-      <footer>
-        <h1 style="margin-bottom: 25px"><strong> ENCUENTRANOS </strong></h1>
-        <a href="https://www.instagram.com/johnbrown.visual/" target="_blank"
-          ><img
-            style="width: 50px; height: 50px"
-            src="Photos/instagram.png"
-            alt="Instagram Link Of JOHN BROWN"
-            id="IG"
-        /></a>
-        <a href="mailto:johnbrown.visuals@gmail.com" target="_blank"
-          ><img
-            style="width: 50px; height: 50px"
-            src="Photos/gmail.png"
-            alt=" Send Mail To JOHN BROWN"
-            id="Mail"
-        /></a>
-        <a href="https://wa.me/5491127201283" target="_blank"
-          ><img
-            style="width: 50px; height: 50px"
-            src="Photos/whatsapp.png"
-            alt=" Send Message To JOHN BROWN"
-            id="Whatsapp"
-        /></a>
-        <a href="tel:5491127201283" target="_blank"
-          ><img
-            style="width: 50px; height: 50px"
-            src="Photos/viber.png"
-            alt=" Call To +54 9 11 2720 1283"
-            id="Whatsapp"
-        /></a>
-      </footer>
     </div>
     <!-- se llaman acá porque primero hay que declarar los elementos que se 
-    controlan con estos script -->
+        controlan con estos script -->
 
     <script src="consejos.js"></script>
     <script src="visuals.js"></script>
@@ -497,5 +515,19 @@
       emailjs.init("apOGt58dLRwB7sVfr"); //No divulgar please!!!! aunque sea una key pública
     </script>
     <script src="slider.js"></script>
+    <script src="./services/authsrvices.js"></script>
+
+    <!-- Vue import mensajes components -->
+    <script src="./Vue-Components/getMensajes.js"></script>
+    <script src="./Vue-Components/postMensajes.js"></script>
+    <script src="./Vue-Components/loginComponent.js"></script>
+    <script src="./Vue-Components/postUsers.js"></script>
+    <script src="./Vue-Components/loginUser.js"></script>
+   
+    <script>
+      new Vue({
+        el: "#app",
+      });
+    </script>
   </body>
 </html>

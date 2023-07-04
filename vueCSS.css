@@ -1,0 +1,29 @@
+.message {
+  border-radius: 5px;
+  height: 60px;
+  margin-bottom: 55px;
+}
+.message-container{
+  height: 300px ;
+  overflow-y: auto;
+}
+.message-title {
+  text-align: left;
+}
+.vueTitle {
+  text-align: left;
+  font-weight: bold;
+  height: auto;
+  background-color: #663838;
+}
+
+.vueContent {
+  text-align: left;
+  background-color: rgb(174, 153, 132);
+
+  height: 100%;
+}
+.message-content {
+  color: black;
+  padding: 10px;
+}

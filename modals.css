@@ -1,0 +1,19 @@
+.modal {
+  display: none; /* Por defecto, el modal estará oculto */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+}
+
+.modal-content {
+  background-color: #072912;
+  margin: 20% auto;
+  padding: 20px;
+  width: 50%;
+  text-align: center;
+}
