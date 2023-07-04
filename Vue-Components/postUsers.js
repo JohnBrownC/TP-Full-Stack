@@ -54,7 +54,7 @@ Vue.component("newuser", {
       }
       // Se hace el post al server
       // Realizar la solicitud POST utilizando fetch
-      fetch("http://gerpidot.pythonanywhere.com/users", {
+      fetch("https://gerpidot.pythonanywhere.com/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

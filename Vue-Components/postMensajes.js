@@ -24,7 +24,7 @@ Vue.component("postmensajes", {
   methods: {
     enviarComentario() {
       // Realizar la solicitud POST utilizando fetch
-      fetch("http://gerpidot.pythonanywhere.com/posts", {
+      fetch("https://gerpidot.pythonanywhere.com/posts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

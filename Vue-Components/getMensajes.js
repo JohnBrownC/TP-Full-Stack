@@ -38,7 +38,7 @@ Vue.component("mensajes", {
     fetchData() {
       // Aquí realizarías la llamada a la API y asignarías los resultados a "items"
       // Por ejemplo, usando la función fetch de JavaScript:
-      fetch("http://gerpidot.pythonanywhere.com/posts")
+      fetch("https://gerpidot.pythonanywhere.com/posts")
         .then((response) => response.json())
         .then((data) => {
           let ordered =data.sort((a,b)=>{return b.id-a.id})

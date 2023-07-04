@@ -39,7 +39,7 @@ Vue.component("loginform", {
       }
       // Se hace el post al server
       // Realizar la solicitud POST utilizando fetch
-      fetch("http://gerpidot.pythonanywhere.com/users/login", {
+      fetch("https://gerpidot.pythonanywhere.com/users/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
