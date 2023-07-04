@@ -11,13 +11,13 @@ Vue.component("loginform", {
           <input type="email" id="emailLogin" v-model="email">
   
           <label for="password">Contraseña:</label>
-          <input type="password" id="passwordLogin" v-model="password">
+          <input type="text" id="passwordLogin" v-model="password">
   
           <button type="submit">Iniciar sesión</button>
           
         </form>
        
-        <a href="#" @click="forgotPassword">¿Olvidaste tu contraseña?</a>
+        <a  @click="forgotPassword">¿Olvidaste tu contraseña?</a>
       </div>
     `,
   data() {

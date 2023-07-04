@@ -55,6 +55,16 @@
             </div>
             <div id="nav-menu" class="nav-menu">
               <div>
+                <a >
+                  <button class="nav-btn" onclick="openCloseMenubar()">
+                    <login
+                      id="loginIcon"
+                      onclick="showAuthModal()"
+                      style="cursor: pointer"
+                    ></login>
+                  </button>
+                </a>
+
                 <a href="#">
                   <button
                     class="nav-btn"
@@ -107,17 +117,18 @@
               style="cursor: pointer"
             ></login>
 
-            
-            <div id="loginModal" class="modal">
-              <div class="modal-content">
-                <newuser id="newuserform" style="display: none;"></newuser>
-                <loginform id="loginform"></loginform>
-                <button style="margin-top: 10px;" onclick="closeModal()">Cerrar</button>
-              </div>
-            </div>
+           
           </div>
         </header>
-
+        <div id="loginModal" class="modal">
+          <div class="modal-content">
+            <newuser id="newuserform" style="display: none"></newuser>
+            <loginform id="loginform"></loginform>
+            <button style="margin-top: 10px" onclick="closeModal()">
+              Cerrar
+            </button>
+          </div>
+        </div>
         <section id="Home" style="margin-top: 12vh; height: auto">
           <main>
             <div class="paragraph">
@@ -523,7 +534,7 @@
     <script src="./Vue-Components/loginComponent.js"></script>
     <script src="./Vue-Components/postUsers.js"></script>
     <script src="./Vue-Components/loginUser.js"></script>
-   
+
     <script>
       new Vue({
         el: "#app",

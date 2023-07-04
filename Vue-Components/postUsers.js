@@ -14,7 +14,7 @@ Vue.component("newuser", {
         <input type="email" id="email2" v-model="email">
   
         <label for="contrasena">Contraseña:</label>
-        <input type="password" id="contrasena" v-model="contrasena">
+        <input type="text" id="contrasena" v-model="contrasena">
   
         <button type="submit">Registrarse</button>
       </form></div>
