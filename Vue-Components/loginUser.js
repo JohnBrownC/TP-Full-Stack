@@ -1,5 +1,3 @@
-
-
 Vue.component("loginform", {
   template: `
       <div>
@@ -12,12 +10,15 @@ Vue.component("loginform", {
   
           <label for="password">Contraseña:</label>
           <input type="text" id="passwordLogin" v-model="password">
-  
-          <button type="submit">Iniciar sesión</button>
+          <div style="display: flex; flex-direction: column;">
+  <button type="submit">Iniciar sesión</button>
+          <a style="color: azure;cursor: pointer;"
+          @click="forgotPassword">¿Olvidaste tu contraseña?</a>
+</div>
           
         </form>
        
-        <a  @click="forgotPassword">¿Olvidaste tu contraseña?</a>
+       
       </div>
     `,
   data() {
@@ -64,12 +65,12 @@ Vue.component("loginform", {
           //Se cambia la imagen de usuario por el nombre
           document.getElementById("imagen-usuario").style.display = "none";
           document.getElementById("user-name").style.display = "block";
-          //setea la primera letra del nombre 
+          //setea la primera letra del nombre
           document.getElementById("user-name").textContent =
             localStorage.getItem("user_name")[0];
-            //cierra el modal y habilita el scroll
-            document.getElementById("loginModal").style.display="none"
-            document.documentElement.style.overflow="auto"
+          //cierra el modal y habilita el scroll
+          document.getElementById("loginModal").style.display = "none";
+          document.documentElement.style.overflow = "auto";
           //se habilita el uso de mensajes
           document.getElementById("iniciasesionmensajes").style.display =
             "none";
@@ -92,6 +93,8 @@ Vue.component("loginform", {
     forgotPassword() {
       // Implementa la lógica para redirigir al componente de restablecimiento de contraseña
       console.log("Olvidaste tu contraseña");
+      document.getElementById("loginform").style.display = "none";
+      document.getElementById("passwordRecovery").style.display = "block";
     },
     showNewUserForm() {
       //Mostramos el from de regístro que está oculto

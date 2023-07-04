@@ -1,22 +1,20 @@
 Vue.component("mensajes", {
   template: `
-    <div  >
-    <div class="message-container">
-      <div class="message" v-for="item in items" :key="item.id">
-      <div class= "vueTitle">
-      <div class="message-title">{{item.title}}</div>
-      </div>
-      <div class="vueContent">
-      <div class="message-content">{{item.content}}</div>
-      </div>
-      
-      </div>
-      </div>
-      
+  <div>
+  <div class="message-container">
+    <div class="message" v-for="item in items" :key="item.id">
+    <div class= "vueTitle">
+   <div style="display: flex; justify-content: space-between;">
+    <div class="message-title">{{item.title}}</div>
+    <div @click="deleteData(item)" style="margin-right: 2px;color: red;"></div>
    </div>
-   
-      
-
+    </div>
+    <div class="vueContent">
+    <div class="message-content">{{item.content}}</div>
+    </div>
+    </div>
+    </div>
+ </div>
   `,
   data() {
     return {
@@ -48,5 +46,8 @@ Vue.component("mensajes", {
           console.error(error);
         });
     },
+    deleteData(item){
+      console.log(item)
+    }
   },
 });
